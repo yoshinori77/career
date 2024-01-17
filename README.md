@@ -1,9 +1,8 @@
 # 職務経歴書
 
 ## 山下慶倫
-<!-- ![ハル](/Users/rasuharu/Documents/SDIM1593.jpeg) -->
 <div style="background: url(/Users/rasuharu/Documents/SDIM1593.jpeg) 50% 50% no-repeat; background-size:cover; position: absolute; top: 0; left: 0; width: 100%; height: 100%; display: flex; justify-content: center; align-items: center;">
-<div style="background: rgba(0,0,0,0.5); padding: 30px 40px; font-size: 3.0em; color: #fff;">Yoshinori Yamashita</div>
+  <div style="background: rgba(0,0,0,0.5); padding: 30px 40px; font-size: 3.0em; color: #fff;">Yoshinori Yamashita</div>
 </div>
 
 <div style="page-break-after: always;"></div>
@@ -13,7 +12,7 @@
 |基本情報||
 |---|-----|
 |Name|山下慶倫 |
-|年齢|31|
+|年齢|32|
 |最寄駅|押上|
 |GitHub|[yoshinori77](https://github.com/yoshinori77)|
 
@@ -25,7 +24,7 @@
 
 ## 言語
 - Python：5年
-- SQL：3年
+- SQL：4年
 - Scala：1年
 - JavaScript：1.5年
 - Ruby：1.5年
@@ -48,22 +47,22 @@
 
 # 概要
 ## スキル・ツール
-- GCP：2年
+- GCP：2.5年
 - AWS：3年
-- Apache Airflow：1年
+- Apache Airflow：1.5年
 - Apache Beam: 0.5年
 - Apache Spark：1.5年
-- BigQuery：1年
+- BigQuery：1.5年
 - Hadoop：1.5年
 - Tableau・BI：1.5年
 - Docker：2.5年
-- Git：4年
+- Git：5年
 - Terraform：0.5年
 - PostgreSQL：2年
 - MySQL：1.5年
-- CI/CD：0.5年
-- 脆弱性診断：0.5年
-- システムパフォーマンス：0.5年
+- CI/CD：1年
+- 脆弱性診断（DevSecOps）：0.5年
+- パフォーマンスチューニング：0.5年
 
 ## 強み
 - 機械学習・データエンジニアリング両方に対応できます。
@@ -94,7 +93,7 @@
 
 ### 担当業務
 - 基本設計・詳細設計
-- 実装（ワークフロー構築、ビッグデータ処理）
+- DevOps、実装（ワークフロー構築、ビッグデータ処理）
 - 単体テスト・結合テスト
 
 ### スキル
@@ -357,27 +356,6 @@
 
 
 <div style="page-break-after: always;"></div>
-
-<!-- # 個人活動
-
-## 株取引のアプリケーション作成
-### 使用言語
-- Python
-
-### スキル
-- [Dash](http://dash.plotly.com/)
-- [Plotly](https://plotly.com/python/)
-- [FastAPI](https://fastapi.tiangolo.com/)
-- [Flask](https://flask.palletsprojects.com/)
-- [pandas](https://pandas.pydata.org/)
-- [Docker](https://www.docker.com/)
-- [Poetry](https://python-poetry.org/)
-
-### コメント
-- Yahoo Finance USからデータを取得し、ファンダメンタルズ分析で必要な情報を一目でわかるようにまとめたり、グラフ化したりしました。
-- そのほかテクニカル分析を行なって将来の株価を分析したり、Dockerで楽に環境構築や管理できています。
-
-<div style="page-break-after: always;"></div> -->
 
 # 個人活動
 
