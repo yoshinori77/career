@@ -1,0 +1,14 @@
+lang: ja
+name: "山下慶倫"
+title: "職務経歴書"
+description: "データエンジニア・データアナリスト 山下慶倫の職務経歴書"
+theme: jekyll-theme-cayman
+url: ""
+baseurl: ""
+markdown: kramdown
+kramdown:
+  input: GFM
+  hard_wrap: false
+plugins:
+  - jekyll-seo-tag
+  - jekyll-sitemap
