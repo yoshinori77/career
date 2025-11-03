@@ -3,8 +3,8 @@ name: "山下慶倫"
 title: "職務経歴書"
 description: "データエンジニア・データアナリスト 山下慶倫の職務経歴書"
 theme: jekyll-theme-cayman
-url: ""
-baseurl: ""
+url: "https://yoshinori77.github.io"
+baseurl: "/career"
 markdown: kramdown
 kramdown:
   input: GFM
