@@ -5,6 +5,7 @@ description: "データエンジニア・データアナリスト 山下慶倫�
 theme: jekyll-theme-cayman
 url: "https://yoshinori77.github.io"
 baseurl: "/career"
+header_image: "/career/assets/images/header-bg.jpg"
 markdown: kramdown
 kramdown:
   input: GFM
