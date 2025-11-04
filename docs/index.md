@@ -5,7 +5,7 @@ description: データエンジニア・データアナリスト 山下慶倫の
 permalink: /
 ---
 
-<div class="hero-card">
+<div class="hero-card has-header-image" style="background-image: url('{{ site.baseurl }}/assets/images/header-bg.jpg');">
   <div class="hero-card__name">Yoshinori Yamashita</div>
   <div class="hero-card__role">データエンジニア・データアナリスト</div>
   <ul class="hero-card__meta">
