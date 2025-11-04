@@ -13,6 +13,15 @@
   padding: 4rem 0; // パディングを追加
 }
 
+// スマホ対応
+@media screen and (max-width: 768px) {
+  .page-header {
+    min-height: 300px; // スマホでは高さを小さく
+    padding: 2rem 1rem; // パディングを小さく
+    background-position: center center; // 背景位置を調整
+  }
+}
+
 .page-header::before {
   content: '';
   position: absolute;
@@ -20,7 +29,7 @@
   left: 0;
   right: 0;
   bottom: 0;
-  background: linear-gradient(135deg, rgba(44, 110, 213, 0.15), rgba(55, 178, 208, 0.1)); // 透明度をさらに下げて猫を目立たせる
+  background: linear-gradient(135deg, rgba(100, 150, 220, 0.1), rgba(120, 180, 230, 0.05));
   z-index: 0;
 }
 
@@ -41,6 +50,16 @@
   position: relative;
 }
 
+// スマホ対応
+@media screen and (max-width: 768px) {
+  .hero-card {
+    padding: 2rem 1.5rem; // パディングを小さく
+    border-radius: 12px; // 角丸を小さく
+    margin-bottom: 2rem;
+    gap: 0.5rem; // 間隔を小さく
+  }
+}
+
 
 .hero-card__name {
   font-size: clamp(2.2rem, 4vw, 3rem);
@@ -48,10 +67,24 @@
   letter-spacing: 0.04em;
 }
 
+// スマホ対応
+@media screen and (max-width: 768px) {
+  .hero-card__name {
+    font-size: clamp(1.8rem, 5vw, 2.2rem); // スマホでフォントサイズを調整
+  }
+}
+
 .hero-card__role {
   font-size: 1.25rem;
   font-weight: 600;
   opacity: 0.92;
+}
+
+// スマホ対応
+@media screen and (max-width: 768px) {
+  .hero-card__role {
+    font-size: 1rem; // スマホでフォントサイズを小さく
+  }
 }
 
 .hero-card__meta {
@@ -80,6 +113,14 @@
   transition: background 0.2s ease, transform 0.2s ease;
 }
 
+// スマホ対応
+@media screen and (max-width: 768px) {
+  .hero-card__links a {
+    padding: 0.5rem 1rem; // パディングを小さく
+    font-size: 0.9rem; // フォントサイズを小さく
+  }
+}
+
 .hero-card__links a:hover,
 .hero-card__links a:focus {
   background: rgba(255, 255, 255, 0.32);
@@ -93,6 +134,37 @@
   background: rgba(44, 110, 213, 0.08);
   border: 1px solid rgba(44, 110, 213, 0.18);
   font-size: 0.95rem;
+}
+
+// スマホ対応（追加の調整）
+@media screen and (max-width: 480px) {
+  .page-header {
+    min-height: 250px; // さらに小さいスマホでは高さをさらに小さく
+    padding: 1.5rem 1rem;
+  }
+
+  .hero-card {
+    padding: 1.5rem 1rem; // パディングをさらに小さく
+    border-radius: 10px;
+  }
+
+  .hero-card__name {
+    font-size: clamp(1.5rem, 6vw, 1.8rem);
+  }
+
+  .hero-card__role {
+    font-size: 0.9rem;
+  }
+
+  .hero-card__links {
+    flex-direction: column; // リンクを縦並びに
+    gap: 0.5rem;
+  }
+
+  .hero-card__links a {
+    width: 100%; // リンクを全幅に
+    text-align: center;
+  }
 }
 
 @media print {
