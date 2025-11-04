@@ -5,10 +5,12 @@
 // ページヘッダーに背景画像を設定
 .page-header {
   background-image: url('/career/assets/images/header-bg.jpg');
-  background-size: cover;
-  background-position: center;
+  background-size: cover; // ヘッダー全体をカバー
+  background-position: center center; // 中央に配置して猫全体が表示されるように
   background-repeat: no-repeat;
   position: relative;
+  min-height: 600px; // ヘッダーの高さを伸ばして猫全体が表示されるように
+  padding: 4rem 0; // パディングを追加
 }
 
 .page-header::before {
@@ -18,7 +20,7 @@
   left: 0;
   right: 0;
   bottom: 0;
-  background: linear-gradient(135deg, rgba(44, 110, 213, 0.85), rgba(55, 178, 208, 0.75));
+  background: linear-gradient(135deg, rgba(44, 110, 213, 0.3), rgba(55, 178, 208, 0.25)); // 透明度を下げて猫を目立たせる
   z-index: 0;
 }
 
