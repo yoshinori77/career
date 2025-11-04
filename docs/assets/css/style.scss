@@ -2,6 +2,31 @@
 ---
 @import "{{ site.theme }}";
 
+// ページヘッダーに背景画像を設定
+.page-header {
+  background-image: url('/career/assets/images/header-bg.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
+}
+
+.page-header::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(135deg, rgba(44, 110, 213, 0.85), rgba(55, 178, 208, 0.75));
+  z-index: 0;
+}
+
+.page-header > * {
+  position: relative;
+  z-index: 1;
+}
+
 .hero-card {
   background: linear-gradient(135deg, rgba(44, 110, 213, 0.95), rgba(55, 178, 208, 0.85));
   border-radius: 16px;
@@ -12,28 +37,8 @@
   gap: 0.75rem;
   margin-bottom: 3rem;
   position: relative;
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
 }
 
-// ヘッダー画像がある場合のオーバーレイ
-.hero-card.has-header-image::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background: linear-gradient(135deg, rgba(44, 110, 213, 0.85), rgba(55, 178, 208, 0.75));
-  z-index: 0;
-  border-radius: 16px;
-}
-
-.hero-card.has-header-image > * {
-  position: relative;
-  z-index: 1;
-}
 
 .hero-card__name {
   font-size: clamp(2.2rem, 4vw, 3rem);
