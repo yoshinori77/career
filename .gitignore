@@ -1,0 +1,16 @@
+.DS_Store
+.vscode/
+.bundle/
+vendor/bundle/
+_site/
+.jekyll-cache/
+.jekyll-metadata
+
+README_.pdf
+README_backup.md
+docs/assets/images/header-bg-original.jpg
+企業へのメッセージ.txt
+略歴.txt
+職務経歴書.pdf
+退職理由.md
+退職理由2.md
