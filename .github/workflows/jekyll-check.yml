@@ -1,0 +1,30 @@
+name: jekyll-check
+
+on:
+  pull_request:
+    paths:
+      - "docs/**"
+      - "Gemfile"
+      - ".ruby-version"
+      - ".github/workflows/jekyll-check.yml"
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+    env:
+      JEKYLL_ENV: production
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Ruby
+        uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: .ruby-version
+          bundler-cache: true
+
+      - name: Build Jekyll site
+        run: bundle exec jekyll build --source docs --destination _site
