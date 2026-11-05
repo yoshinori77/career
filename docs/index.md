@@ -10,7 +10,7 @@ permalink: /
   <div class="hero-card__role">データエンジニア・データアナリスト</div>
   <ul class="hero-card__meta">
     <li>押上在住</li>
-    <li>34歳</li>
+    <li>35歳</li>
   </ul>
   <div class="hero-card__links">
     <a href="https://x.com/50kaitenzlove" target="_blank" rel="noopener">X（@50kaitenzlove）</a>
@@ -20,14 +20,33 @@ permalink: /
 
 ## プロフィール
 
-データ基盤の設計・構築から分析まで一貫して対応できるデータエンジニアです。GCP、AWS、Snowflake、dbtなどを活用し、**安くて速いデータパイプライン構築**が得意です。また、機械学習モデルの構築やビジネス課題の解決にも対応可能です。フリーランスとして複数のDX案件を手がけ、データ変換時間を90%削減するなど成果を出しています。
+データ基盤の設計・構築・運用を軸に、分析・可視化や機械学習システムの開発を経験してきたデータエンジニアです。BigQuery、Snowflake、Dataform、dbtなどを用いたデータ連携・変換、既存基盤の移行、データ品質管理・運用改善を担当してきました。物流案件ではSnowflake＋dbtへの移行により、データ変換時間を約90%削減しました。
+
+個人開発では、LangChainやOpenAI APIを用いたRAG・要約・分析アプリをStreamlitで試作しています。データ処理からLLMとの連携、画面実装まで経験しています。
 
 ### 主要スキル
 
-- **データ基盤**: GCP（BigQuery、Dataform）、AWS、Snowflake、dbt、Iceberg
-- **開発言語**: Python（6年）、SQL（5年）、TypeScript（2年）
-- **BI・可視化**: Streamlit、Looker Studio、QuickSight、Tableau
-- **その他**: Git、Docker、Terraform、CI/CD
+- **データ基盤・運用**: BigQuery、Snowflake、Dataform、dbt、Iceberg、Airflow、データ品質管理
+- **クラウド・開発環境**: Google Cloud、AWS、Terraform、Docker、Git、CI/CD
+- **開発言語**: Python（6年）、SQL（5年）、Scala、TypeScript（2年）
+- **分析・可視化**: Streamlit、Data Studio、QuickSight、Tableau
+- **AI・LLM（個人開発・学習）**: LangChain、OpenAI API、Qdrant、RAG、要約・分析アプリ
+
+---
+
+## 個人開発・学習（RAG・LLMアプリ）
+
+### PDF検索・質問応答と要約アプリ
+
+- LangChain、OpenAI API、Qdrantを用い、PDFのテキスト抽出・分割、ベクトル検索、検索文書を参照した回答生成（RAG）を実装
+- 回答とともに参照文書を返す処理、PDFアップロード・質問入力のStreamlit画面を作成
+- YouTube字幕やWebページを取得し、LLMで要約するアプリを試作
+
+### 外部データとLLMを組み合わせた株価分析アプリ
+
+- 外部APIによる株価・財務情報・ニュースの取得、Pythonによる指標計算、OpenAI APIによる文章分析を組み合わせた処理フローを実装
+- Streamlitで銘柄・分析条件の選択と結果表示を実装し、非同期処理や画面の状態保持に対応
+- データ取得や例外処理など、一部の機能について、pytestによる正常系・異常系テストを作成
 
 ---
 
@@ -36,26 +55,26 @@ permalink: /
 ### 2024/8 - 現在：フリーランス（データエンジニア）
 
 #### 出版のDX案件
-- アプリケーションDB・CSVからのデータ連携、Dataformによるデータ変換、Looker Studioでの書籍売上可視化（ランキング、マーケ情報連携など）を担当
+- アプリケーションDB・CSVからのデータ連携、Dataformによるデータ変換、Data Studioでの書籍売上可視化（ランキング、マーケ情報連携など）を担当
 - 100人以上が使用する社内ツールの開発・運用を行い、書籍売上のDX化に貢献（基盤構築・立ち上げフェーズ）
-- 今後はAI導入やWebアプリケーション開発（Streamlit）などの拡張フェーズを推進予定
+- Streamlit による業務アプリ開発、AI 活用の検討を担当
 
 ##### スキルセット
 - Python、SQL
-- Google Cloud（BigQuery、Dataform、Cloud Run、Cloud Storage、Looker Studio）
+- Google Cloud（BigQuery、Dataform、Cloud Run、Cloud Storage、Data Studio）
 
 ##### 主な取り組み
 - CSVロードの冗長化と復旧手順を見据えたETL設計（GCS→GCS Parquet→BigQuery）
 - Cloud Run による動的スキーマ変化への前処理、Protocol/Mixinを活用した疎結合設計
 - 処理済みファイルのテーブル管理による再読込防止
 - Dataformを用いたスタースキーマ設計とメタデータ管理
-- E-R図や設計書などドキュメント整備、データ活用方針提案
+- E-R図や設計書などのドキュメント整備、業務要件に合わせたデータ活用方針提案
 
 #### 物流のDX案件
 - アプリケーションDBからデータ連携、dbtによるデータ変換、QuickSightでの物流DXダッシュボード改善を担当
 - AWS RDS から直接 QuickSight に接続していた構成を、Snowflake＋dbt経由に移行しデータ変換時間を約90%削減
 - CSVデータ連携をIceberg化し、データロードを省略する構成にリプレイス
-- 今後はdbtテスト拡充によるデータ品質・保守性向上を推進予定
+- dbtテスト拡充によるデータ品質・保守性向上の方針整理
 
 ##### スキルセット
 - Python、TypeScript、SQL
@@ -72,9 +91,9 @@ permalink: /
 
 ### 2023/8 - 2024/7：ココナラ（データエンジニア）
 
-- Airflow（Cloud Composer）のワークフロー構築と 2 系移行
+- Airflowのワークフロー構築と 2 系移行
 - データリネージ・データ品質テスト導入（データマネジメント）
-- ダッシュボードの開発・運用（Looker Studio）
+- ダッシュボードの開発・運用（Data Studio）
 - DevSecOps（CI/CD）による開発効率化
 - MLOps（Vertex AI Pipelines）で機械学習の運用強化
 - チーム間の連携強化、業務フロー改善
@@ -86,8 +105,8 @@ permalink: /
 
 **主なスキル**
 - Python、SQL
-- ワークフロー構築（Cloud Composer、Apache Airflow、Embulk）
-- GCP（BigQuery、Cloud Composer、Cloud Storage、Cloud Monitoring など）
+- ワークフロー構築（Apache Airflow、Embulk）
+- GCP（BigQuery、Cloud Storage、Cloud Monitoring など）
 - Docker
 - CI/CD（GitHub Actions）
 - Vertex AI Pipelines
@@ -116,10 +135,10 @@ permalink: /
 
 **主なスキル**
 - Python、SQL
-- ワークフロー構築（Cloud Composer、Apache Airflow）
+- ワークフロー構築（Apache Airflow）
 - スケーラブルなバッチジョブ開発（Dataflow、Apache Beam）
 - Spark によるビッグデータ処理
-- GCP（Cloud Composer、Cloud Storage、Artifact Registry、Dataproc など）
+- GCP（Cloud Storage、Artifact Registry、Dataproc など）
 - Docker
 - CI/CD（GitLab Runner）
 
@@ -147,10 +166,10 @@ permalink: /
 - Scala
 
 **主なスキル**
-- 学習・推論パイプラインの構築（Cloud Composer、シェルスクリプト）
+- 学習・推論パイプラインの構築（Airflow、シェルスクリプト）
 - Terraform によるシステム構築の自動化
 - Scala、Spark によるビッグデータ処理
-- GCP（Vertex AI、Cloud Composer、Cloud Storage、Artifact Registry、Dataproc など）
+- GCP（Vertex AI、Cloud Storage、Artifact Registry、Dataproc など）
 - AWS（EMR、S3 など）
 - Numpy の行列演算を活用し、協調フィルタリングのコサイン類似度計算を約 1/100 に高速化
 
@@ -282,15 +301,6 @@ permalink: /
 **経験**
 - Rails や Git など開発の基本を習得
 - 画像認識・データ分析に触れるきっかけとなった案件
-
----
-
-## その他
-
-- Kaggle: [プロフィール](https://www.kaggle.com/yamashita)
-- 参加コンペ
-  - JPX Tokyo Stock Exchange Prediction（2022） — [GitHub](https://github.com/yoshinori77/jpx_tokyo_market_prediction)
-  - Santander Customer Transaction Prediction（2019） — 銅メダル（549/8751、上位7%）
 
 <div class="print-note">
   PDF 印刷の際はブラウザの「背景のグラフィックを印刷」オプションを有効化するとデザインが反映されます。

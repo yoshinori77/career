@@ -3,12 +3,14 @@
 公開版はこちらです。
 
 - GitHub Pages: [https://yoshinori77.github.io/career/](https://yoshinori77.github.io/career/)
-- PDF: [README.pdf](README.pdf)
+- PDF（詳細版）: [README.pdf](README.pdf)
+- PDF（短縮版）: `職務経歴書_短縮版.pdf`
 
 ## 運用方針
 
 - GitHub Pages の公開元は `main:/docs` です。
 - 公開内容の正本は `docs/index.md` です。
+- 短縮版の正本は `docs/short.md` です。
 - `README.md` は案内と運用メモのみを置き、職務経歴本文は持ちません。
 
 ## 更新手順
@@ -26,6 +28,15 @@ Ruby 3.3 系を使います。`rbenv` や `mise` を使う場合は `.ruby-versi
 bundle install
 bundle exec jekyll build --source docs --destination _site
 bundle exec jekyll serve --source docs --livereload
+```
+
+## PDF 生成
+
+添付用 PDF は、Web 表示をそのまま印刷せず、Markdown から印刷向けレイアウトを生成します。
+詳細版 `職務経歴書.pdf` / `README.pdf` と、短縮版 `職務経歴書_短縮版.pdf` を同時に生成します。
+
+```bash
+node scripts/build-resume-pdf.mjs
 ```
 
 ## 補足
