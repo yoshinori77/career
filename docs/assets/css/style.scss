@@ -196,3 +196,21 @@
   .resume-nav { display: grid; }
   .resume-nav a { text-align: center; }
 }
+
+// PDFと同じ企業・在籍期間のまとまりをWebでも示す。
+.main-content .career-entry {
+  margin: 1.5rem 0;
+  padding: 1.3rem 1.5rem;
+  background: #f7fbf8;
+  border: 1px solid #e4efe8;
+  border-left: 3px solid #b8dec8;
+  border-radius: 12px;
+}
+.main-content .career-entry > h3:first-child { margin-top: 0; color: #0f5132; line-height: 1.55; }
+.main-content .career-entry > h4 { border-top: 1px solid #d9e9df; padding-top: 1rem; }
+.main-content .career-entry > h4:first-of-type { border-top: 0; padding-top: 0; }
+.main-content .career-entry > :last-child { margin-bottom: 0; }
+.main-content .career-entry + hr { display: none; }
+@media screen and (max-width: 480px) {
+  .main-content .career-entry { padding: 1rem; margin: 1.2rem 0; }
+}
