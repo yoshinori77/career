@@ -136,7 +136,7 @@ async function init() {
   const labels = {mau: 'MAU', repeat: '過去月観測購入者率', browsing: '回遊率', funnel: '購入ファネル', months: '月の帰属', money: '売上・数量', attributes: '属性', limits: '出典・制約'};
   const definitions = clear('definitions'); Object.entries(DATA.metadata.definitions).forEach(([key, value]) => definitions.append(el('dt', '', labels[key] || key), el('dd', '', value)));
   $('validation').textContent = 'dbt ' + DATA.metadata.dbt_version + ' / DuckDB ' + DATA.metadata.duckdb_version + '。モデル構築と検証 ' + DATA.metadata.dbt_checks_passed + '件が成功。集計生成 ' + DATA.metadata.generated_utc.slice(0, 10) + ' UTC。';
-  $('footer-status').textContent = '全期間 ' + num(DATA.metadata.period_observed_users) + ' 観測匿名ID（月次MAUは非加算） / 非公開・集計のみ';
+  $('footer-status').textContent = '全期間 ' + num(DATA.metadata.period_observed_users) + ' 観測匿名ID（月次MAUは非加算） / 公開サンプル・集計のみ';
   $('month').addEventListener('change', () => { page = 0; render(); });
   $('dimension').addEventListener('change', renderAttributes);
   $('product-search').addEventListener('input', () => { page = 0; renderProducts(); });
