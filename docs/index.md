@@ -38,7 +38,7 @@ AI活用では、根拠付き回答と会社別の閲覧権限を備えた「Com
 
 ### 主な実務実績
 
-- Snowflake＋dbtへの移行により、物流案件のデータ変換時間を約90%削減
+- 物流案件のCSV連携パイプラインをIcebergで再構築し、処理時間を約90%削減
 - 100人以上が使う出版業務ツールで、データ連携と書籍売上の可視化を担当
 - 数億レコード規模のデータを、Spark・Scala・Pythonで分散処理
 
@@ -66,7 +66,7 @@ AI活用では、根拠付き回答と会社別の閲覧権限を備えた「Com
 
 公開サンプルと合成データを使った個人開発です。
 
-[公開デモ：ダッシュボードと分析6事例](https://yoshinori77.github.io/career/commerce-insights/) ／ [認証付きAI・文書管理デモ（招待制）](https://rasuharu-commerce-insights.rasuharu.chatgpt.site/tenant.html)
+[公開デモ：ダッシュボードと分析6事例](https://yoshinori77.github.io/career/commerce-insights/) ／ [AIの動作・評価（図解）](https://yoshinori77.github.io/career/commerce-insights/ai.html) ／ [認証付きAI・文書管理デモ（招待制）](https://rasuharu-commerce-insights.rasuharu.chatgpt.site/tenant.html)
 
 ### PDF検索・質問応答と要約アプリ
 
@@ -104,8 +104,8 @@ AI活用では、根拠付き回答と会社別の閲覧権限を備えた「Com
 
 #### 物流のDX案件
 - アプリケーションDBからデータ連携、dbtによるデータ変換、QuickSightでの物流DXダッシュボード改善を担当
-- AWS RDS から直接 QuickSight に接続していた構成を、Snowflake＋dbt経由に移行しデータ変換時間を約90%削減
-- CSVデータ連携をIceberg化し、データロードを省略する構成にリプレイス
+- AWS RDS から直接 QuickSight に接続していた構成を、Snowflake＋dbt経由へ移行
+- CSV連携のデータパイプラインをIcebergで再構築し、データロードを省略。処理時間を約90%削減
 - dbtテスト拡充によるデータ品質・保守性向上の方針整理
 
 ##### スキルセット

@@ -29,7 +29,7 @@ permalink: /short/
 
 ### 主な実務実績
 
-- Snowflake＋dbtへの移行により、物流案件のデータ変換時間を約90%削減
+- 物流案件のCSV連携パイプラインをIcebergで再構築し、処理時間を約90%削減
 - 100人以上が使う出版業務ツールで、データ連携と書籍売上の可視化を担当
 - 数億レコード規模のデータを、Spark・Scala・Pythonで分散処理
 
@@ -44,7 +44,7 @@ permalink: /short/
 - BM25・Dense・Hybridの検索と、指標ツールの数値・文書を引用するLLM回答を実装。会社・役割・文書権限をAPI・検索・AI入力・キャッシュへ適用
 - 検索評価、数値・引用・保留／拒否のテスト、トークン数・費用・応答時間の記録と、GitHub Actionsのテスト・SAST・秘密情報検査を実装
 
-公開サンプル・合成データによる個人開発。[公開デモ・分析6事例](https://yoshinori77.github.io/career/commerce-insights/)。ほかにLangChain・Qdrant・StreamlitによるPDF検索／質問応答、要約・株価分析アプリを試作。
+公開サンプル・合成データによる個人開発。[公開デモ・分析6事例](https://yoshinori77.github.io/career/commerce-insights/) ／ [AIの動作・評価（図解）](https://yoshinori77.github.io/career/commerce-insights/ai.html)。ほかにLangChain・Qdrant・StreamlitによるPDF検索／質問応答、要約・株価分析アプリを試作。
 
 ---
 
@@ -59,7 +59,7 @@ permalink: /short/
 
 #### 物流のDX案件
 - AWS RDS から直接 QuickSight に接続していた構成を、Snowflake＋dbt 経由に移行
-- CSVデータ連携をIceberg化し、データロードを省略する構成にリプレイス
+- CSV連携のデータパイプラインをIcebergで再構築し、データロードを省略。処理時間を約90%削減
 - Terraform / AWS / dbt を用いた基盤改善、dbtテスト拡充によるデータ品質・保守性向上の方針整理を担当
 
 ### 2023/8 - 2024/7：ココナラ（データエンジニア）
