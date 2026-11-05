@@ -1,15 +1,15 @@
 # 職務経歴書
 
-公開版はこちらです。
+目的に合わせて、次の入口からご覧ください。
 
-- GitHub Pages: [https://yoshinori77.github.io/career/](https://yoshinori77.github.io/career/)
-- Web（短縮版）: [https://yoshinori77.github.io/career/short/](https://yoshinori77.github.io/career/short/)
-- PDF（詳細版）: [README.pdf](README.pdf)
-- PDF（短縮版）: [職務経歴書_短縮版.pdf](職務経歴書_短縮版.pdf)
+| 確認したいこと | 資料 |
+|---|---|
+| 相談できる業務・主な実績を短時間で確認 | [要約版（Web）](https://yoshinori77.github.io/career/short/) ／ [2ページのPDF](職務経歴書_短縮版.pdf) |
+| 実際の画面と分析事例を試す | [Commerce Insights：公開デモ・分析6事例](https://yoshinori77.github.io/career/commerce-insights/)（ログイン不要） |
+| 担当範囲・技術・職務経歴を詳しく確認 | [詳細版（Web）](https://yoshinori77.github.io/career/) ／ [詳細PDF](README.pdf) |
 
-## ポートフォリオ
-
-[Commerce Insights：公開GA4のダッシュボードと分析6事例](https://yoshinori77.github.io/career/commerce-insights/)
+<details>
+<summary>このリポジトリの更新・検証手順</summary>
 
 ## 運用方針
 
@@ -58,3 +58,5 @@ node scripts/build-resume-pdf.mjs
 2026-11-05時点の[GitHub Pagesの条件](https://docs.github.com/en/pages/getting-started-with-github-pages/github-pages-limits)では、公開repoのPagesをGitHub Freeで利用でき、サイト上限1GB・月間帯域100GB（soft limit）です。無圧縮で約1MB/閲覧とすれば、月1,000閲覧で約1GB、10,000閲覧で約10GBが目安です。キャッシュや圧縮、閲覧ページ数で転送量は変わります。
 
 [public repoの標準GitHub-hosted runnerは無料](https://docs.github.com/en/billing/concepts/product-billing/github-actions)です。今回の配信に追加の常駐サーバーやLLM/API料金はありません。独自ドメイン・大きなrunner・保存artifact/cacheの超過、既存招待制SiteやOpenAI APIの費用は別です。アカウント全体や将来の料金まで無料と保証するものではありません。
+
+</details>
