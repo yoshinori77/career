@@ -5,6 +5,9 @@ vendor/bundle/
 _site/
 .jekyll-cache/
 .jekyll-metadata
+/tmp/
+/output/
+職務経歴書.txt
 
 README_.pdf
 README_backup.md

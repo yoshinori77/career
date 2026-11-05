@@ -1,7 +1,7 @@
 import { execFile } from "node:child_process";
-import { copyFileSync, existsSync, mkdirSync, readFileSync, statSync, writeFileSync } from "node:fs";
+import { copyFileSync, existsSync, mkdirSync, mkdtempSync, readFileSync, renameSync, rmSync, writeFileSync } from "node:fs";
 import { dirname, resolve } from "node:path";
-import { fileURLToPath } from "node:url";
+import { fileURLToPath, pathToFileURL } from "node:url";
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
 const repoRoot = resolve(__dirname, "..");
@@ -402,39 +402,28 @@ ${contentHtml}
 </html>`;
 }
 
-function printPdf(chromePath, inputHtml, outputPdf) {
-  return new Promise((resolvePrint, rejectPrint) => {
+async function printPdf(chromePath, inputHtml, outputPdf) {
+  const buildDir = mkdtempSync(resolve(repoRoot, "tmp/pdf-build-"));
+  const freshPdf = resolve(buildDir, "output.pdf");
+  try {
     const args = [
       "--headless=new",
       "--disable-gpu",
       "--no-first-run",
       "--no-pdf-header-footer",
-      `--user-data-dir=${resolve(repoRoot, "tmp/chrome-pdf-profile")}`,
-      `--print-to-pdf=${outputPdf}`,
-      `file://${inputHtml}`,
+      `--user-data-dir=${resolve(buildDir, "profile")}`,
+      `--print-to-pdf=${freshPdf}`,
+      pathToFileURL(inputHtml).href,
     ];
-
-    const child = execFile(chromePath, args, { timeout: 20000 }, (error) => {
-      if (!error) {
-        resolvePrint();
-        return;
-      }
-      if (existsSync(outputPdf) && statSync(outputPdf).size > 0) {
-        resolvePrint();
-        return;
-      }
-      rejectPrint(error);
+    await new Promise((resolvePrint, rejectPrint) => {
+      execFile(chromePath, args, { timeout: 20000 }, error => error ? rejectPrint(error) : resolvePrint());
     });
-
-    child.stdout?.on("data", (chunk) => {
-      if (String(chunk).includes("bytes written")) {
-        setTimeout(() => child.kill("SIGTERM"), 250);
-      }
-    });
-    child.stderr?.on("data", (chunk) => {
-      if (String(chunk).includes("bytes written")) {
-        setTimeout(() => child.kill("SIGTERM"), 250);
-      }
-    });
-  });
+    const pdf = readFileSync(freshPdf);
+    if (!pdf.subarray(0, 5).equals(Buffer.from("%PDF-")) || !pdf.subarray(-32).includes(Buffer.from("%%EOF"))) {
+      throw new Error("Chrome did not produce a complete PDF.");
+    }
+    renameSync(freshPdf, outputPdf);
+  } finally {
+    rmSync(buildDir, { recursive: true, force: true });
+  }
 }
