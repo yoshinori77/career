@@ -77,6 +77,19 @@ for(const m of ai.matchAll(/data-report="([^"]+)">([^<]+)</g)){
 }
 assert.equal(cells,44,'All numeric comparison cells must have report provenance.');
 
+
+// The diagram is an illustrative question, separate from the measured report.
+const diagram=ai.match(/<figure id="metric-rank-figure"[\s\S]*?<\/figure>/)?.[0];assert(diagram,'Ranking diagram absent');
+const relevant=diagram.match(/data-relevant="([^"]+)"/)[1].split(' ');
+const ranked=[...diagram.matchAll(/class="rank-doc (related|unrelated)" data-doc="([A-F])"/g)].map(m=>{assert.equal(m[1],relevant.includes(m[2])?'related':'unrelated');return m[2];});
+assert.deepEqual(relevant,['A','C','F']);assert.deepEqual(ranked,['B','A','D','C','E','F']);
+const top=ranked.slice(0,5),first=top.findIndex(id=>relevant.includes(id))+1;
+const discount=i=>1/Math.log2(i+2),dcg=top.reduce((sum,id,i)=>sum+(relevant.includes(id)?discount(i):0),0),ideal=relevant.reduce((sum,_,i)=>sum+discount(i),0);
+const exampleScores={hit_at_1:relevant.includes(top[0])?'1':'0',recall_at_5:(100*top.filter(id=>relevant.includes(id)).length/relevant.length).toFixed(1)+'%',mrr_at_5:(first?1/first:0).toFixed(3),ndcg_at_5:(dcg/ideal).toFixed(3),false_evidence_rate:(100*3/4).toFixed(0)+'%',p95_rank:Math.ceil(.95*60)+'番目'};
+for(const [key,value]of Object.entries(exampleScores))assert(ai.includes('data-example="'+key+'">'+value+'<'),'Illustrative score differs: '+key);
+assert.deepEqual(ai.match(/data-ideal="([^"]+)"/)[1].split(' ').slice(0,3).sort(),[...relevant].sort());
+for(const phrase of ['架空の1問','3つの関連文書は同じ関連度','この値を質問全体で平均','平均時間や最長時間とは異なります','このE5比較は検索だけの実験'])assert(ai.includes(phrase),'Diagram interpretation absent: '+phrase);
+
 assert(bytes<2_000_000,'The public demo should remain under 2 MB');
 const require=createRequire(import.meta.url),book=require('../docs/commerce-insights/casebook.js');
 const cases=book.build(data);assert.equal(cases.length,6);assert.equal(new Set(cases.map(c=>c.id)).size,6);
