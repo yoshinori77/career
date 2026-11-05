@@ -3,8 +3,13 @@
 公開版はこちらです。
 
 - GitHub Pages: [https://yoshinori77.github.io/career/](https://yoshinori77.github.io/career/)
+- Web（短縮版）: [https://yoshinori77.github.io/career/short/](https://yoshinori77.github.io/career/short/)
 - PDF（詳細版）: [README.pdf](README.pdf)
-- PDF（短縮版）: `職務経歴書_短縮版.pdf`
+- PDF（短縮版）: [職務経歴書_短縮版.pdf](職務経歴書_短縮版.pdf)
+
+## ポートフォリオ
+
+[Commerce Insights：公開GA4のダッシュボードと分析6事例](https://yoshinori77.github.io/career/commerce-insights/)
 
 ## 運用方針
 
