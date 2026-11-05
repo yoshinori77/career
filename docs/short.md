@@ -1,16 +1,23 @@
+---
+layout: default
+title: 職務経歴書（短縮版）
+description: データ基盤・分析・AI活用の主要経験をまとめた職務経歴書
+permalink: /short/
+---
+
 ## プロフィール
 
 データ基盤の設計・構築・運用を軸に、分析・可視化や機械学習システムの開発を経験してきたデータエンジニアです。BigQuery、Snowflake、Dataform、dbtなどを用いたデータ連携・変換、既存基盤の移行、データ品質管理・運用改善を担当してきました。
 
-個人開発では、LangChainやOpenAI APIを用いたRAG・要約・分析アプリをStreamlitで試作しています。データ処理からLLMとの連携、画面実装まで経験しています。
+個人開発では、GA4公開データを用い、データ基盤・分析ダッシュボード・根拠付きLLM回答・会社別のアクセス制御を組み合わせた「Commerce Insights」を開発しました。指標定義や閲覧権限を守ってデータをAIにつなぐ構成を、実装とテストで検証しています。
 
 ### 主要スキル
 
-- **データ基盤・運用**: Snowflake、BigQuery、dbt、Dataform、Iceberg、Airflow
+- **データ基盤・運用**: Snowflake、BigQuery、dbt、Dataform、Iceberg、Airflow、DuckDB（個人開発）
 - **クラウド・開発環境**: Google Cloud、AWS、Terraform、Docker、GitHub Actions
 - **開発言語**: Python、SQL、Scala、TypeScript
 - **分析・可視化**: Data Studio、QuickSight、Tableau、Streamlit
-- **AI・LLM（個人開発・学習）**: LangChain、OpenAI API、Qdrant、RAG、要約・分析アプリ
+- **AI・データアプリ（個人開発）**: OpenAI API、RAG、BM25・Dense・Hybrid、文書のアクセス制御、LangChain、Qdrant
 
 ### 代表成果（実務）
 
@@ -21,10 +28,15 @@
 
 ---
 
-## 個人開発・学習（RAG・LLMアプリ）
+## 個人開発（データ基盤・分析・生成AI）
 
-- LangChain、OpenAI API、QdrantによるPDF検索・質問応答（RAG）を実装。PDFのテキスト抽出・分割からベクトル検索、参照文書を返す回答生成、Streamlit画面まで作成
-- YouTube字幕・Webページの要約アプリ、外部データの取得・Pythonによる指標計算・LLMによる文章分析を組み合わせた株価分析アプリを試作
+### EC分析・根拠付きAI・会社別BI「Commerce Insights」
+
+- 公開GA4の92日・約430万イベントをDuckDB・dbtで整備。独自の共通指標と6つの分析事例で、数値の根拠から追加調査・施策案・評価方法まで提示
+- BM25・Dense・Hybridの検索と、指標ツールの数値・文書を引用するLLM回答を実装。会社・役割・文書権限をAPI・検索・AI入力・キャッシュへ適用
+- 検索評価、数値・引用・保留／拒否のテスト、トークン数・費用・応答時間の記録と、GitHub Actionsのテスト・SAST・秘密情報検査を実装
+
+公開サンプル・合成データによる個人開発。[公開デモ・分析6事例](https://yoshinori77.github.io/career/commerce-insights/)。ほかにLangChain・Qdrant・StreamlitによるPDF検索／質問応答、要約・株価分析アプリを試作。
 
 ---
 

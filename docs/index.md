@@ -22,19 +22,33 @@ permalink: /
 
 データ基盤の設計・構築・運用を軸に、分析・可視化や機械学習システムの開発を経験してきたデータエンジニアです。BigQuery、Snowflake、Dataform、dbtなどを用いたデータ連携・変換、既存基盤の移行、データ品質管理・運用改善を担当してきました。物流案件ではSnowflake＋dbtへの移行により、データ変換時間を約90%削減しました。
 
-個人開発では、LangChainやOpenAI APIを用いたRAG・要約・分析アプリをStreamlitで試作しています。データ処理からLLMとの連携、画面実装まで経験しています。
+個人開発では、GA4公開データを用い、データ基盤・分析ダッシュボード・根拠付きLLM回答・会社別のアクセス制御を組み合わせた「Commerce Insights」を開発しました。指標定義や閲覧権限を守ってデータをAIにつなぐ構成を、実装とテストで検証しています。
 
 ### 主要スキル
 
-- **データ基盤・運用**: BigQuery、Snowflake、Dataform、dbt、Iceberg、Airflow、データ品質管理
+- **データ基盤・運用**: BigQuery、Snowflake、Dataform、dbt、Iceberg、Airflow、データ品質管理、DuckDB（個人開発）
 - **クラウド・開発環境**: Google Cloud、AWS、Terraform、Docker、Git、CI/CD
 - **開発言語**: Python（6年）、SQL（5年）、Scala、TypeScript（2年）
 - **分析・可視化**: Streamlit、Data Studio、QuickSight、Tableau
-- **AI・LLM（個人開発・学習）**: LangChain、OpenAI API、Qdrant、RAG、要約・分析アプリ
+- **AI・データアプリ（個人開発）**: OpenAI API、RAG（BM25・Dense・Hybrid）、指標ツール連携、文書のアクセス制御、LangChain、Qdrant
 
 ---
 
-## 個人開発・学習（RAG・LLMアプリ）
+## 個人開発（データ基盤・分析・生成AI）
+
+### EC分析・根拠付きAI・会社別BI「Commerce Insights」（2026年11月）
+
+「画面とAIで数字の意味が違う」「分析結果から次の行動が決まらない」「会社の文書を権限に沿ってAIに渡したい」という課題を想定し、データ整備から画面・生成AI・認可まで実装したサンプルアプリです。
+
+- **データ基盤・共通指標**：GA4公開サンプル92日・約430万イベントをParquetで取得し、DuckDB・dbtで整備。売上・購入導線・継続購入などの独自の共通指標を、画面・分析事例・AIの指標ツールで共有
+- **分析から施策の検討**：売上変動・ファネル・継続購入など6課題について、観測した事実、追加調査、判断、未実行の施策案、評価方法を示す画面を作成
+- **RAG・生成AI**：用語検索（BM25）、意味ベクトル検索（Dense）、両者を組み合わせたHybridを質問に応じて切替。LLMの回答には、許可した指標関数の数値と参照文書を引用
+- **認証・認可**：ログインした本人の会社・役割・文書権限をサーバーで確認し、API・検索・AI入力・キャッシュへ適用。権限失効後に古い結果を返さない処理を実装
+- **評価・運用**：固定した文書・質問セットでHit@1・Recall@5などの検索評価を実施。回答の数値・引用・情報不足時の保留・他社要求の拒否をテストし、トークン数・費用・応答時間を記録。GitHub Actionsでテスト・ビルド・SAST・依存関係／秘密情報の検査を実施
+
+公開サンプルと合成データを使った個人開発です。共通指標層は独自実装で、dbt公式Semantic Layerの導入実績とは区別しています。
+
+[公開デモ：ダッシュボードと分析6事例](https://yoshinori77.github.io/career/commerce-insights/) ／ [認証付きAI・文書管理デモ（招待制）](https://rasuharu-commerce-insights.rasuharu.chatgpt.site/tenant.html)
 
 ### PDF検索・質問応答と要約アプリ
 

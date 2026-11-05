@@ -318,7 +318,6 @@ hr {
   margin: 4mm 0;
 }
 
-.section-l2,
 .role-section,
 .job-block {
   break-inside: avoid;
@@ -365,7 +364,7 @@ hr {
 }
 
 .career-section {
-  break-before: page;
+  break-before: auto;
 }
 
 .career-section .role-section:first-of-type {
