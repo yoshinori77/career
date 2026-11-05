@@ -4,6 +4,7 @@ on:
   pull_request:
     paths:
       - "docs/**"
+      - "scripts/validate-public-demo.mjs"
       - "Gemfile"
       - ".ruby-version"
       - ".github/workflows/jekyll-check.yml"
@@ -19,6 +20,9 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
+
+      - name: Validate aggregate-only public demo
+        run: node scripts/validate-public-demo.mjs
 
       - name: Set up Ruby
         uses: ruby/setup-ruby@v1
