@@ -6,7 +6,7 @@ permalink: /
 ---
 
 <div class="hero-card">
-  <div class="hero-card__name">Yoshinori Yamashita</div>
+  <div class="hero-card__name">山下 慶倫 / Yoshinori Yamashita</div>
   <div class="hero-card__role">データエンジニア・データアナリスト</div>
   <ul class="hero-card__meta">
     <li>押上在住</li>
@@ -18,11 +18,29 @@ permalink: /
   </div>
 </div>
 
+<nav class="resume-nav" aria-label="資料を選ぶ">
+  <a href="/career/short/">2ページの要約</a>
+  <a href="/career/commerce-insights/">動くデモを見る（ログイン不要）</a>
+  <a href="https://github.com/yoshinori77/career/raw/refs/heads/main/README.pdf">詳細PDFを保存</a>
+</nav>
+
 ## プロフィール
 
-データ基盤の設計・構築・運用を軸に、分析・可視化や機械学習システムの開発を経験してきたデータエンジニアです。BigQuery、Snowflake、Dataform、dbtなどを用いたデータ連携・変換、既存基盤の移行、データ品質管理・運用改善を担当してきました。物流案件ではSnowflake＋dbtへの移行により、データ変換時間を約90%削減しました。
+データ基盤の設計・移行から、分析用データモデルとBIの整備までを担当しているデータエンジニアです。BigQuery・Snowflake・dbt・Dataformを用いたデータ連携、品質管理、運用改善を経験してきました。
 
-個人開発では、GA4公開データを用い、データ基盤・分析ダッシュボード・根拠付きLLM回答・会社別のアクセス制御を組み合わせた「Commerce Insights」を開発しました。指標定義や閲覧権限を守ってデータをAIにつなぐ構成を、実装とテストで検証しています。
+AI活用では、根拠付き回答と会社別の閲覧権限を備えた「Commerce Insights」を個人開発し、検索・回答品質まで検証しています。
+
+### ご相談いただける業務
+
+- **データ基盤の整備・移行**：データの取込・変換、分析用モデル、品質テスト、再処理・運用手順の設計と実装
+- **分析・BIの改善**：共通指標の定義、ダッシュボード、数字の不一致や集計負荷の調査
+- **RAG・生成AIの検証**：文書検索・指標連携の試作、引用と回答品質の評価、会社・文書単位のアクセス制御
+
+### 主な実務実績
+
+- Snowflake＋dbtへの移行により、物流案件のデータ変換時間を約90%削減
+- 100人以上が使う出版業務ツールで、データ連携と書籍売上の可視化を担当
+- 数億レコード規模のデータを、Spark・Scala・Pythonで分散処理
 
 ### 主要スキル
 

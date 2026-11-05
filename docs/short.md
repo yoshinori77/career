@@ -5,26 +5,34 @@ description: データ基盤・分析・AI活用の主要経験をまとめた�
 permalink: /short/
 ---
 
+<div class="hero-card">
+  <div class="hero-card__name">山下 慶倫 / Yoshinori Yamashita</div>
+  <div class="hero-card__role">データ基盤・分析・AI活用の検証 / 要約版</div>
+</div>
+<nav class="resume-nav" aria-label="資料を選ぶ">
+  <a href="/career/">詳しい職務経歴</a>
+  <a href="/career/commerce-insights/">動くデモを見る（ログイン不要）</a>
+  <a href="https://github.com/yoshinori77/career/raw/refs/heads/main/%E8%81%B7%E5%8B%99%E7%B5%8C%E6%AD%B4%E6%9B%B8_%E7%9F%AD%E7%B8%AE%E7%89%88.pdf">短縮PDFを保存</a>
+</nav>
+
 ## プロフィール
 
-データ基盤の設計・構築・運用を軸に、分析・可視化や機械学習システムの開発を経験してきたデータエンジニアです。BigQuery、Snowflake、Dataform、dbtなどを用いたデータ連携・変換、既存基盤の移行、データ品質管理・運用改善を担当してきました。
+データ基盤の設計・移行から、分析用データモデルとBIの整備までを担当しているデータエンジニアです。BigQuery・Snowflake・dbt・Dataformを用いたデータ連携、品質管理、運用改善を経験してきました。
 
-個人開発では、GA4公開データを用い、データ基盤・分析ダッシュボード・根拠付きLLM回答・会社別のアクセス制御を組み合わせた「Commerce Insights」を開発しました。指標定義や閲覧権限を守ってデータをAIにつなぐ構成を、実装とテストで検証しています。
+### ご相談いただける業務
 
-### 主要スキル
+- **基盤整備・移行**：Snowflake・BigQuery、dbt・Dataformを使ったデータ連携・変換、品質テスト、運用改善
+- **分析・BI**：指標定義と分析用モデル、QuickSight・Streamlit等の画面整備、集計の不一致・負荷の調査
+- **AI活用の検証**：RAG・根拠付き回答・検索評価・文書権限（OpenAI API、BM25・Dense・Hybrid）
 
-- **データ基盤・運用**: Snowflake、BigQuery、dbt、Dataform、Iceberg、Airflow、DuckDB（個人開発）
-- **クラウド・開発環境**: Google Cloud、AWS、Terraform、Docker、GitHub Actions
-- **開発言語**: Python、SQL、Scala、TypeScript
-- **分析・可視化**: Data Studio、QuickSight、Tableau、Streamlit
-- **AI・データアプリ（個人開発）**: OpenAI API、RAG、BM25・Dense・Hybrid、文書のアクセス制御、LangChain、Qdrant
+開発環境：Python・SQL・TypeScript、AWS・Google Cloud、Terraform・GitHub Actions。
 
-### 代表成果（実務）
+### 主な実務実績
 
-- AWS RDS から直接 QuickSight に接続していた構成を、Snowflake＋dbt 経由へ移行し、データ変換時間を約90%削減
-- GCS→GCS Parquet→BigQuery のETL設計、動的スキーマ変化への前処理、再読込防止テーブル管理を実装
-- Dataform / dbt を用いたデータモデリング、メタデータ管理、データ品質・保守性向上の方針整理を推進
-- Airflow、CI/CD、データリネージ、データ品質テストを含むデータ基盤運用改善を経験
+- Snowflake＋dbtへの移行により、物流案件のデータ変換時間を約90%削減
+- 100人以上が使う出版業務ツールで、データ連携と書籍売上の可視化を担当
+- 数億レコード規模のデータを、Spark・Scala・Pythonで分散処理
+
 
 ---
 

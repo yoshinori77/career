@@ -9,14 +9,14 @@
   background-position: center center; // 中央に配置して猫全体が表示されるように
   background-repeat: no-repeat;
   position: relative;
-  min-height: 400px; // ヘッダーの高さを伸ばして猫全体が表示されるように
-  padding: 4rem 0; // パディングを追加
+  min-height: 180px; // 背景画像を保ち、本文までの距離を短くする
+  padding: 1.5rem 1rem; // 余白を調整
 }
 
 // スマホ対応
 @media screen and (max-width: 768px) {
   .page-header {
-    min-height: 300px; // スマホでは高さを小さく
+    min-height: 156px; // スマホでは高さを小さく
     padding: 2rem 1rem; // パディングを小さく
     background-position: center center; // 背景位置を調整
   }
@@ -29,7 +29,7 @@
   left: 0;
   right: 0;
   bottom: 0;
-  background: linear-gradient(135deg, rgba(100, 150, 220, 0.1), rgba(120, 180, 230, 0.05));
+  background: linear-gradient(135deg, rgba(10, 40, 60, 0.74), rgba(12, 60, 75, 0.72));
   z-index: 0;
 }
 
@@ -39,14 +39,14 @@
 }
 
 .hero-card {
-  background: linear-gradient(135deg, rgba(44, 110, 213, 0.95), rgba(55, 178, 208, 0.85));
+  background: linear-gradient(135deg, #235a9f, #136b78);
   border-radius: 16px;
-  padding: 2.8rem 3.2rem;
+  padding: 1.5rem 2rem;
   color: #fff;
   box-shadow: 0 22px 48px rgba(32, 70, 120, 0.22);
   display: grid;
   gap: 0.75rem;
-  margin-bottom: 3rem;
+  margin-bottom: 1.5rem;
   position: relative;
 }
 
@@ -62,7 +62,7 @@
 
 
 .hero-card__name {
-  font-size: clamp(2.2rem, 4vw, 3rem);
+  font-size: clamp(1.5rem, 3vw, 2.1rem);
   font-weight: 700;
   letter-spacing: 0.04em;
 }
@@ -104,7 +104,7 @@
 }
 
 .hero-card__links a {
-  background: rgba(255, 255, 255, 0.18);
+  background: rgba(0, 0, 0, 0.16);
   border-radius: 999px;
   padding: 0.55rem 1.4rem;
   color: #fff;
@@ -123,7 +123,7 @@
 
 .hero-card__links a:hover,
 .hero-card__links a:focus {
-  background: rgba(255, 255, 255, 0.32);
+  background: rgba(0, 0, 0, 0.28);
   transform: translateY(-1px);
 }
 
@@ -139,7 +139,7 @@
 // スマホ対応（追加の調整）
 @media screen and (max-width: 480px) {
   .page-header {
-    min-height: 250px; // さらに小さいスマホでは高さをさらに小さく
+    min-height: 144px; // さらに小さいスマホでは高さをさらに小さく
     padding: 1.5rem 1rem;
   }
 
@@ -183,4 +183,16 @@
     background: #fff;
     border: 1px solid #ccc;
   }
+}
+
+// 成果物と本文へすぐ進める、コンパクトな案内。
+.page-header .project-name { font-size: 2rem; margin: 0.2rem 0; }
+.page-header .project-tagline { font-size: 1rem; margin: 0.4rem 0; opacity: 1; }
+.page-header .btn { display: none; }
+.resume-nav { display: flex; flex-wrap: wrap; gap: 0.6rem; margin: 0 0 1.5rem; }
+.resume-nav a { padding: 0.5rem 0.8rem; border: 1px solid #b9d8cc; border-radius: 8px; background: #f3faf6; font-size: 0.95rem; }
+.resume-nav a:focus-visible { outline: 3px solid #176c53; outline-offset: 3px; }
+@media screen and (max-width: 480px) {
+  .resume-nav { display: grid; }
+  .resume-nav a { text-align: center; }
 }
