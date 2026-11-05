@@ -3,6 +3,7 @@
 <body><header><a href="#" class="brand"><span class="logo">ci.</span><span>Commerce Insights<span class="brand-sub">BEHAVIOR & REVENUE LAB</span></span></a><span class="badge">● GA4公開サンプル / 集計のみ</span></header>
 <main><nav class="site-nav" aria-label="メイン"><a href="../">職務経歴書へ</a><a href="index.html" aria-current="page">概況ダッシュボード</a><a href="cases.html">課題別の6事例</a></nav><section class="intro"><div><span class="eyebrow">FROM EVENTS TO EVIDENCE</span><h1>行動と売上を、<br>確かめられる数字に。</h1><p>Google Merchandise Store由来のGA4公開サンプル。<br>3か月のイベントをdbtで整え、行動・売上・品質を同じ画面で確認します。</p></div><div class="context"><strong>OBSERVATION WINDOW</strong><p>2020.11.01 — 2021.01.31<br><span id="dataset-size">92日・4,295,584イベント</span></p><small>難読化された過去の公開データです。<br>実事業の現在値やGA4 UIの再現ではありません。</small></div></section>
 <aside class="case-entry"><div><h2>顧客の課題から、次の施策へ。</h2><p>6つの事例で、調査の根拠・判断・施策案と評価方法を確認できます。</p></div><a href="cases.html">課題別の6事例を見る →</a></aside>
+<p class="scope">売上・MAUなど月次16指標をOSS MetricFlowの共通定義で計算し、配信前に既存集計と照合しています。この集計画面の閲覧でOpenAI APIは利用しません。</p>
 <div id="error" role="alert" hidden></div>
 <div class="toolbar"><div class="view-title"><span class="dot"></span>行動・売上の概況</div><div class="filters"><label for="month">対象月 <select id="month" aria-label="対象月"></select></label></div></div>
 <p class="scope" id="scope" aria-live="polite">検証済み集計を読み込んでいます。</p>
