@@ -4,7 +4,7 @@
 
 | 確認したいこと | 資料 |
 |---|---|
-| 相談できる業務・主な実績を短時間で確認 | [要約版（Web）](https://yoshinori77.github.io/career/short/) ／ [2ページのPDF](職務経歴書_短縮版.pdf) |
+| 相談できる業務・主な実績を短時間で確認 | [職務経歴書・短縮版（Web）](https://yoshinori77.github.io/career/short/) ／ [短縮版（PDF・2ページ）](職務経歴書_短縮版.pdf) |
 | 実際の画面と分析事例を試す | [Commerce Insights：公開デモ・分析6事例](https://yoshinori77.github.io/career/commerce-insights/)（ログイン不要） |
 | 根拠付きAIの動作・検索と生成の評価を確認 | [AIの表示例・評価一覧](https://yoshinori77.github.io/career/commerce-insights/ai.html)（ログイン不要・API呼出なし） |
 | 担当範囲・技術・職務経歴を詳しく確認 | [詳細版（Web）](https://yoshinori77.github.io/career/) ／ [詳細PDF](README.pdf) |

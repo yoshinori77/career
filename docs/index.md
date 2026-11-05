@@ -19,7 +19,7 @@ permalink: /
 </div>
 
 <nav class="resume-nav" aria-label="資料を選ぶ">
-  <a href="/career/short/">2ページの要約</a>
+  <a href="/career/short/">短縮版の職務経歴書</a>
   <a href="/career/commerce-insights/">動くデモを見る（ログイン不要）</a>
   <a href="https://github.com/yoshinori77/career/raw/refs/heads/main/README.pdf">詳細PDFを保存</a>
 </nav>
@@ -84,6 +84,8 @@ AI活用では、根拠付き回答と会社別の閲覧権限を備えた「Com
 
 ## 職務経歴
 
+<section class="career-entry" markdown="block">
+
 ### 2024/8 - 現在：フリーランス（データエンジニア）
 
 #### 出版のDX案件
@@ -119,7 +121,11 @@ AI活用では、根拠付き回答と会社別の閲覧権限を備えた「Com
 - Iceberg、Snowflake などモダンデータ技術の導入経験
 - データエンジニアリングにおけるテスト駆動・オブザーバビリティの実践
 
+</section>
+
 ---
+
+<section class="career-entry" markdown="block">
 
 ### 2023/8 - 2024/7：ココナラ（データエンジニア）
 
@@ -151,7 +157,11 @@ AI活用では、根拠付き回答と会社別の閲覧権限を備えた「Com
 - データ基盤開発をリードしつつ、チケットテンプレートの整備や CI/CD によるテスト、脆弱性チェック、デプロイ自動化を進めました。
 - インフラチームとの連携フローを定義し、グループ間で効率的に協働できるように改善しました。
 
+</section>
+
 ---
+
+<section class="career-entry" markdown="block">
 
 ### 2023/1 - 2023/7：アスタミューゼ（データエンジニア）
 
@@ -180,7 +190,11 @@ AI活用では、根拠付き回答と会社別の閲覧権限を備えた「Com
 - パフォーマンス監視や脆弱性診断ツールの導入を通じて、開発と運用の効率化を推進しました。
 - 人の入れ替わりが激しい環境でも引き継ぎしやすいように、ドキュメント作成やデータリネージ、ER 図整備を重視しました。
 
+</section>
+
 ---
+
+<section class="career-entry" markdown="block">
 
 ### 2020/6 - 2022/12：パーソルキャリア株式会社（データエンジニア／データサイエンティスト）
 
@@ -234,7 +248,11 @@ AI活用では、根拠付き回答と会社別の閲覧権限を備えた「Com
 - アプリケーション開発経験が少ない状態から、一人で実装を進めてリリースまで担当しました。
 - 最終的には本採用しなかったものの、SQS、SageMaker、Step Functions など周辺サービスにも触れました。
 
+</section>
+
 ---
+
+<section class="career-entry" markdown="block">
 
 ### 2019/9 - 2020/5：フリーランス（データアナリスト）
 
@@ -256,7 +274,11 @@ AI活用では、根拠付き回答と会社別の閲覧権限を備えた「Com
 - Keras
 - scikit-learn
 
+</section>
+
 ---
+
+<section class="career-entry" markdown="block">
 
 ### 2018/11 - 2019/9：フリーランス（データアナリスト）
 
@@ -278,7 +300,11 @@ AI活用では、根拠付き回答と会社別の閲覧権限を備えた「Com
 - scikit-learn を用いた機械学習処理
 - チーム開発
 
+</section>
+
 ---
+
+<section class="career-entry" markdown="block">
 
 ### 2017/11 - 2018/10：DATUM STUDIO株式会社（データアナリスト）
 
@@ -305,7 +331,11 @@ AI活用では、根拠付き回答と会社別の閲覧権限を備えた「Com
 **学び・成果**
 - 業務で AWS を使用したのは初めてで、クラウド基盤構築の実務経験を得ました。
 
+</section>
+
 ---
+
+<section class="career-entry" markdown="block">
 
 ### 2016/11 - 2017/10：株式会社モノゴコロ（サーバーサイドエンジニア／データアナリスト）
 
@@ -333,6 +363,8 @@ AI活用では、根拠付き回答と会社別の閲覧権限を備えた「Com
 **経験**
 - Rails や Git など開発の基本を習得
 - 画像認識・データ分析に触れるきっかけとなった案件
+
+</section>
 
 <div class="print-note">
   PDF 印刷の際はブラウザの「背景のグラフィックを印刷」オプションを有効化するとデザインが反映されます。

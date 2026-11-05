@@ -56,6 +56,7 @@ function extractPrintableMarkdown(markdown) {
   let inFrontMatter = lines[0]?.trim() === "---";
   let frontMatterDone = !inFrontMatter;
   let started = false;
+  let inWebCareerCard = false;
   const out = [];
 
   for (let index = 0; index < lines.length; index += 1) {
@@ -66,6 +67,15 @@ function extractPrintableMarkdown(markdown) {
         inFrontMatter = false;
         frontMatterDone = true;
       }
+      continue;
+    }
+    // Web-only company cards keep the printed Markdown and layout unchanged.
+    if (line === '<section class="career-entry" markdown="block">') {
+      inWebCareerCard = true;
+      continue;
+    }
+    if (inWebCareerCard && line === "</section>") {
+      inWebCareerCard = false;
       continue;
     }
     if (line.startsWith("<div class=\"print-note\"")) break;

@@ -7,7 +7,7 @@ permalink: /short/
 
 <div class="hero-card">
   <div class="hero-card__name">山下 慶倫 / Yoshinori Yamashita</div>
-  <div class="hero-card__role">データ基盤・分析・AI活用の検証 / 要約版</div>
+  <div class="hero-card__role">データ基盤・分析・AI活用の検証 / 短縮版</div>
 </div>
 <nav class="resume-nav" aria-label="資料を選ぶ">
   <a href="/career/">詳しい職務経歴</a>
@@ -50,6 +50,8 @@ permalink: /short/
 
 ## 職務経歴
 
+<section class="career-entry" markdown="block">
+
 ### 2024/8 - 現在：フリーランス（データエンジニア）
 
 #### 出版のDX案件
@@ -62,6 +64,10 @@ permalink: /short/
 - CSV連携のデータパイプラインをIcebergで再構築し、データロードを省略。処理時間を約90%削減
 - Terraform / AWS / dbt を用いた基盤改善、dbtテスト拡充によるデータ品質・保守性向上の方針整理を担当
 
+</section>
+
+<section class="career-entry" markdown="block">
+
 ### 2023/8 - 2024/7：ココナラ（データエンジニア）
 
 - Airflowのワークフロー構築と2系移行
@@ -69,14 +75,24 @@ permalink: /short/
 - データリネージ、データ品質テスト、メタデータ管理などのデータマネジメント施策を導入
 - CI/CD、チケットテンプレート、脆弱性チェック、デプロイ自動化など開発効率化を推進
 
+</section>
+
+<section class="career-entry" markdown="block">
+
 ### 2023/1 - 2023/7：アスタミューゼ（データエンジニア）
 
 - Python / Dataflow / Apache Beam によるスケーラブルなバッチジョブ開発
 - Airflow の DAG 整備、BigQuery での前処理・リバースETLを担当
 - Cloud Profiler、Logging、Snyk、SAST、データリネージなどを導入し、開発・運用の効率化を推進
 
+</section>
+
+<section class="career-entry" markdown="block">
+
 ### 2020/6 - 2022/12：パーソルキャリア（データエンジニア／データサイエンティスト）
 
 - 数億レコード規模のテーブルを Spark / Scala / Python で分散処理し、集計・前処理を担当
 - AWS から GCP への移行、Dataproc、Terraform を用いた基盤運用を経験
 - Item2Vec、協調フィルタリング、推論APIなど、機械学習モデルの構築・運用も担当
+
+</section>
