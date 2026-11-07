@@ -45,6 +45,8 @@ bundle exec jekyll serve --source docs --livereload
 node scripts/build-resume-pdf.mjs
 ```
 
+Chrome / Chromium の実行ファイルは macOS・Linux の標準パスから検出します。別の場所にある場合は `CHROME_PATH` で指定できます。
+
 ## 補足
 
 - GitHub Pages 側の build は GitHub 管理 workflow `pages-build-deployment` で実行されます。

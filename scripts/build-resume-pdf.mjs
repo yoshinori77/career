@@ -23,12 +23,16 @@ const outputs = [
 ];
 
 const chromeCandidates = [
+  process.env.CHROME_PATH,
+  "/usr/bin/chromium",
+  "/usr/bin/chromium-browser",
+  "/usr/bin/google-chrome",
   "/Applications/Google Chrome.app/Contents/MacOS/Google Chrome",
   "/Applications/Google Chrome for Testing.app/Contents/MacOS/Google Chrome for Testing",
   "/Applications/Google Chrome Canary.app/Contents/MacOS/Google Chrome Canary",
 ];
 
-const chromePath = chromeCandidates.find(existsSync);
+const chromePath = chromeCandidates.find(path => path && existsSync(path));
 if (!chromePath) {
   throw new Error("Chrome executable was not found.");
 }
@@ -219,8 +223,8 @@ function renderPage(contentHtml, title) {
 body {
   color: #1f2933;
   font-family: -apple-system, BlinkMacSystemFont, "Hiragino Sans", "Yu Gothic", "YuGothic", "Noto Sans JP", sans-serif;
-  font-size: 10.2pt;
-  line-height: 1.42;
+  font-size: 9.8pt;
+  line-height: 1.38;
   margin: 0;
 }
 
@@ -377,7 +381,7 @@ hr {
   break-before: auto;
 }
 
-.career-section .role-section:first-of-type {
+.career-section > .role-section {
   break-inside: auto;
 }
 
@@ -417,6 +421,7 @@ async function printPdf(chromePath, inputHtml, outputPdf) {
   try {
     const args = [
       "--headless=new",
+      ...(process.getuid?.() === 0 ? ["--no-sandbox"] : []),
       "--disable-gpu",
       "--no-first-run",
       "--no-pdf-header-footer",
