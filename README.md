@@ -38,7 +38,7 @@ bundle exec jekyll serve --source docs --livereload
 
 ## PDF 生成
 
-添付用 PDF は、Web 表示をそのまま印刷せず、Markdown から印刷向けレイアウトを生成します。
+添付用 PDF は、Markdown から印刷向けレイアウトを生成し、Chrome / Chromium で出力する方式に統一しています。
 詳細版 `職務経歴書.pdf` / `README.pdf` と、短縮版 `職務経歴書_短縮版.pdf` を同時に生成します。
 
 ```bash
@@ -46,6 +46,7 @@ node scripts/build-resume-pdf.mjs
 ```
 
 Chrome / Chromium の実行ファイルは macOS・Linux の標準パスから検出します。別の場所にある場合は `CHROME_PATH` で指定できます。
+再生成後は短縮版が2ページに収まることと、両PDFの全文・リンク・改ページを確認します。Chromeやフォントの環境によって改ページ位置は変わるため、配布するPDF自体を確認してください。
 
 ## 補足
 

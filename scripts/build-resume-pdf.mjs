@@ -19,6 +19,7 @@ const outputs = [
     pdfPath: resolve(repoRoot, "職務経歴書_短縮版.pdf"),
     copies: [],
     title: "職務経歴書 短縮版 - 山下慶倫",
+    compact: true,
   },
 ];
 
@@ -43,7 +44,7 @@ for (const output of outputs) {
   const source = readFileSync(output.sourcePath, "utf8");
   const bodyMarkdown = extractPrintableMarkdown(source);
   const contentHtml = renderMarkdown(bodyMarkdown);
-  const html = renderPage(contentHtml, output.title);
+  const html = renderPage(contentHtml, output.title, output.compact);
   writeFileSync(output.htmlPath, html, "utf8");
 
   await printPdf(chromePath, output.htmlPath, output.pdfPath);
@@ -204,7 +205,7 @@ function escapeHtml(text) {
     .replaceAll('"', "&quot;");
 }
 
-function renderPage(contentHtml, title) {
+function renderPage(contentHtml, title, compact = false) {
   return `<!doctype html>
 <html lang="ja">
 <head>
@@ -381,8 +382,12 @@ hr {
   break-before: auto;
 }
 
-.career-section > .role-section {
+.career-section > .role-section:first-of-type {
   break-inside: auto;
+}
+
+.resume-full .career-section + .section-l2 {
+  break-before: page;
 }
 
 .career-section .role-section:first-of-type .job-block {
@@ -395,7 +400,7 @@ strong {
 }
 </style>
 </head>
-<body>
+<body class="${compact ? "resume-short" : "resume-full"}">
 <header class="resume-header">
   <div class="resume-header__top">
     <div>
