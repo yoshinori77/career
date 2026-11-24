@@ -29,6 +29,8 @@ BigQuery・Snowflake・dbt・Dataformを用いたデータ基盤の立ち上げ�
 
 ### 主な実務実績
 
+- Snowflake・dbtのデータ統合、CortexによるAI分析、App Runtime上の業務ダッシュボードを一体化するプロジェクトに参画
+
 - 物流のCSV連携パイプラインをIcebergで再構築し、処理時間を約90%削減
 - 100人以上が使う出版業務ツールで、データ取込・モデル設計・売上可視化を担当
 - 数億レコード規模の分散処理とレコメンド運用。類似度計算を行列演算で約1/100の処理時間に短縮
@@ -40,6 +42,14 @@ BigQuery・Snowflake・dbt・Dataformを用いたデータ基盤の立ち上げ�
 <section class="career-entry" markdown="block">
 
 ### 2024/8 - 現在：フリーランス（データエンジニア）
+
+#### SaaS事業：データ統合・AI分析・業務ダッシュボード
+
+参画プロジェクトの実績（チームで実装・改善した内容を含む）。
+
+- **データ基盤**：CRM・通話・GitHub情報をSnowflake・dbtで分析用に整備。MySQL CDCの取込・重複・鮮度・再処理を考慮した基盤開発に対応
+- **AI活用**：Cortex LLMによる通話品質・購買意欲・失注要因の分析、Semantic View・Cortex AnalystとSlackをつないだ自然言語分析を整備
+- **可視化**：Snowflake App Runtime、Next.js・React・TypeScriptで営業KPI、PRレビュー待ち・所要時間、不具合の集中領域を可視化する画面・APIを開発・改善
 
 #### 出版DX：基盤立ち上げ・データ活用
 
