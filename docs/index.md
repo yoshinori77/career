@@ -30,7 +30,7 @@ permalink: /
 
 BigQuery・Snowflake・dbt・Dataformを中心に、データ基盤の立ち上げ・移行・性能改善を担当してきました。既存構成の課題を整理し、移行方針や処理方式を設計して実装・運用まで進めています。事業部・分析担当・インフラ担当と要件・仕様を調整し、担当領域の開発をリードできます。
 
-AI領域では、実務でレコメンド・推論API・MLOpsを経験。個人開発ではRAG、指標ツール連携、権限制御、検索・回答品質の評価まで実装し、データ基盤とAIアプリケーションの両面から課題に取り組んでいます。
+AI領域では、実務でレコメンド・推論API・MLOpsに加え、Snowflake Cortexによる通話・メール分析、自然言語分析、業務ダッシュボードを統合するプロジェクトに参画。個人開発ではRAG、指標ツール連携、権限制御、検索・回答品質の評価まで実装し、データ基盤とAIアプリケーションの両面から課題に取り組んでいます。
 
 ### ご相談いただける業務
 
@@ -40,6 +40,8 @@ AI領域では、実務でレコメンド・推論API・MLOpsを経験。個人�
 
 ### 主な実務実績
 
+- **営業・開発データを業務判断につなぐデータ・AI基盤**：CRM・通話・開発データの統合、Cortexによる構造化分析、App Runtime上のダッシュボード、Slackからの自然言語分析を一体化するプロジェクトに参画
+
 - **データ連携の処理時間を約90%削減**：物流案件のCSV連携パイプラインをIcebergで再構築し、従来のデータロードを省略
 - **100人以上が使う出版業務ツールの基盤整備**：データ取込からDataformのモデル設計、書籍売上の可視化、開発・運用を担当
 - **数億レコード規模のデータ処理・機械学習運用**：Sparkによる分散処理、レコメンドパイプライン、AWSからGCPへの移行に従事
@@ -47,11 +49,13 @@ AI領域では、実務でレコメンド・推論API・MLOpsを経験。個人�
 
 ### 主要スキル
 
-- **言語・API**：Python（2017年〜実務使用）、SQL、Scala、TypeScript、FastAPI、Flask
+- **言語・API**：Python（2017年〜実務使用）、SQL、Scala、TypeScript、FastAPI、Flask、Next.js、React、Node.js
 - **DWH・データモデリング**：BigQuery、Snowflake、dbt、Dataform、Iceberg、スタースキーマ、データマート、データ品質・リネージ
 - **処理・機械学習基盤**：Airflow、Cloud Composer、Dataflow、Apache Beam、Spark、Dataproc、Vertex AI Pipelines
 - **クラウド・開発運用**：Google Cloud、AWS、Terraform、Docker、GitHub Actions、CI/CD、監視・脆弱性検査
 - **分析・可視化**：Streamlit、Looker Studio、QuickSight、Tableau、scikit-learn、特徴量設計、レコメンド
+- **生成AI・業務活用（実務）**：Snowflake Cortex LLM、Cortex Analyst、Semantic View、通話・メールの構造化分析、Slack連携
+- **データアプリ（実務）**：Snowflake App Runtime、Snowflake Node.js SDK、Next.js、React、TypeScript、Recharts
 - **生成AI・評価（個人開発）**：OpenAI API、LangChain、Qdrant、Hybrid検索、指標ツール連携、認可、DuckDB・MetricFlow
 
 ---
@@ -61,6 +65,19 @@ AI領域では、実務でレコメンド・推論API・MLOpsを経験。個人�
 <section class="career-entry" markdown="block">
 
 ### 2024/8 - 現在：フリーランス（データエンジニア）
+
+#### SaaS事業のデータ・AI活用基盤：データ統合・生成AI分析・業務ダッシュボード
+
+**参画領域**：データエンジニアリング・生成AI活用・業務ダッシュボードを横断する開発・改善。以下は、参画プロジェクトでチームとして実装・改善した機能と成果です。
+
+- **データエンジニアリング**：HubSpotのCRM情報、Zoomの通話・発言ログ、GitHubのIssue・PR情報をSnowflakeに取り込み、dbtでステージング・中間モデル・データマートを整備。営業活動・商談・開発状況を横断し、状況把握や改善判断に使える分析データを提供
+- **CDC・データ品質**：MySQLの変更データをAWS DMS・S3経由でSnowflakeに取り込む基盤の構築・検証に対応。重複・削除・更新順序、スキーマ変化、取込漏れ・鮮度を確認し、再処理と障害調査に必要な情報を整備
+- **生成AIによる構造化分析**：Snowflake CortexのLLM関数をdbtモデルに組み込み、通話品質のスコアリング、メールの購買意欲・緊急度、顧客課題・失注要因の抽出を実装。非構造データを比較・集計に使える指標へ変換し、増分処理と出力形式・欠損値の扱いを整えた分析用データマートを構築
+- **自然言語でのデータ活用**：Semantic Viewで業務上の指標・テーブルの関係を定義し、Cortex Analystを介して営業データを自然言語で問い合わせる仕組みを整備。Slack Botと連携し、SQLを直接記述せずに分析結果を確認できる導線を整備
+- **営業・開発ダッシュボード**：Snowflake App Runtime上のNext.js・React・TypeScriptアプリを開発・改善。Snowflake Node.js SDKによるデータ照会API、営業KPI・ファネル・タスク状況、PRレビュー待ち・所要時間、不具合の集中領域を可視化。集計から明細に掘り下げ、優先して対応する課題を確認できる画面を整備
+- **指標定義・検証・運用**：レビュー時間の起点、集計対象、NULLと0、未分類データの扱いを整理し、フィルタ・明細表示とデータ更新時刻を整備。GitHubの元情報と画面を照合し、テスト・CI/CD・権限を踏まえた運用改善に対応
+
+**技術・機能**：Python、SQL、dbt、Snowflake（Cortex LLM／Cortex Analyst／Semantic View／App Runtime）、AWS DMS、S3、HubSpot API、Zoom API、GitHub API、Next.js、React、TypeScript、Node.js、Snowflake Node.js SDK、Recharts、Slack API、Google Cloud、Terraform、GitHub Actions
 
 #### 出版のDX案件：データ基盤の立ち上げ・売上可視化
 
