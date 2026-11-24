@@ -49,13 +49,13 @@ AI領域では、実務でレコメンド・推論API・MLOpsに加え、Snowfla
 
 ### 主要スキル
 
-- **言語・API**：Python（2017年〜実務使用）、SQL、Scala、TypeScript、FastAPI、Flask、Next.js、React、Node.js
+- **言語・API**：Python（2017年〜実務使用）、SQL、Scala、TypeScript、FastAPI、Flask、Node.js
 - **DWH・データモデリング**：BigQuery、Snowflake、dbt、Dataform、Iceberg、スタースキーマ、データマート、データ品質・リネージ
 - **処理・機械学習基盤**：Airflow、Cloud Composer、Dataflow、Apache Beam、Spark、Dataproc、Vertex AI Pipelines
 - **クラウド・開発運用**：Google Cloud、AWS、Terraform、Docker、GitHub Actions、CI/CD、監視・脆弱性検査
 - **分析・可視化**：Streamlit、Looker Studio、QuickSight、Tableau、scikit-learn、特徴量設計、レコメンド
 - **生成AI・業務活用（実務）**：Snowflake Cortex LLM、Cortex Analyst、Semantic View、通話・メールの構造化分析、Slack連携
-- **データアプリ（実務）**：Snowflake App Runtime、Snowflake Node.js SDK、Next.js、React、TypeScript、Recharts
+- **データアプリ（実務）**：Snowflake App Runtime、Snowflake Node.js SDK、TypeScript、Recharts
 - **生成AI・評価（個人開発）**：OpenAI API、LangChain、Qdrant、Hybrid検索、指標ツール連携、認可、DuckDB・MetricFlow
 
 ---
